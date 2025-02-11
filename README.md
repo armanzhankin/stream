@@ -9,3 +9,4 @@ graph TD
     E --> I[Persistent Storage]
     I --> H
     H --> J[Discord Users]
+```
