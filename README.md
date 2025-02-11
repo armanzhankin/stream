@@ -1,10 +1,11 @@
+```mermaid
 graph TD
-A[Wikipedia SSE Stream<br/>(RecentChanges API)] --> B[Event Ingestion Service<br/>(Kafka Producer)]
-B --> C[Kafka Cluster<br/>(Topic: wikipedia_events)]
-C --> D[Language Filtering Service<br/>(Kafka Consumer)]
-C --> E[Statistics Aggregation Service<br/>(Kafka Consumer)]
-D --> F[Filtered Events Topic<br/>(Optional)]
-F --> H[Discord Bot Service]
-E --> I[Persistent Storage<br/>(Redis/MongoDB/PostgreSQL)]
-I --> H[Discord Bot Service]
-H --> J[Discord Users<br/>(Commands: !recent, !setLang, !stats)]
+    A[Wikipedia SSE Stream] --> B[Event Ingestion Service]
+    B --> C[Kafka Cluster]
+    C --> D[Language Filtering Service]
+    C --> E[Statistics Aggregation Service]
+    D --> F[Filtered Events Topic (Optional)]
+    F --> H[Discord Bot Service]
+    E --> I[Persistent Storage]
+    I --> H
+    H --> J[Discord Users]
