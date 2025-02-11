@@ -10,14 +10,13 @@ graph TD;
     I[Persistent Storage (Redis/MongoDB/PostgreSQL)];
     J[Discord Users (Commands: !recent, !setLang, !stats)];
     
-    A --> B
-    B --> C
-    C --> D
-    C --> E
-    D --> F
-    F --> H
-    E --> I
-    I --> H
-    H --> J
-
+    A --> B;
+    B --> C;
+    C --> D;
+    C --> E;
+    D --> F;
+    F --> H;
+    E --> I;
+    I --> H;
+    H --> J;
 ```
